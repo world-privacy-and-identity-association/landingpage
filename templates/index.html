@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <div>
+        <h1>Welcome to {{appname}}!</h1>
+        
+        <p>This service is provided by WPIA (<a href="https://wpia.club" target="_blank">https://wpia.club</a>)</p>
+    </div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="info card" id="votes">
+      <div class="card-heading text-white bg-info">
+        {{_('About')}}
+      </div>
+      <div class="card-body">
+        <p><p>{{_('Information')}}</p></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="info  card" id="votes">
+      <div class="card-heading text-white bg-info">
+        {{_('Certificate Authority (CA)')}}
+      </div>
+      <div class="card-body">
+        <p>{{_('Register for your free account to be able to get your on S/MIME certificates')}}</p>
+        <p><a href="https://www.{{domain}}">https://www.{{domain}}</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="info card" id="votes">
+      <div class="card-heading text-white bg-info">
+        {{_('Challenge System')}}
+      </div>
+      <div class="card-body">
+        <p>{{_('To show your knowledge pass the challenges. For some roles challenges must be passed once a year.')}}</p>
+        <p>{{_('To log into the system you need a certificate.')}}</p>
+        <p><a href="https://quiz.{{domain}}">https://quiz.{{domain}}</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="info card" id="votes">
+      <div class="card-heading text-white bg-info">
+        {{_('Support')}}
+      </div>
+      <div class="card-body">
+        <p>{{_('If you need support send an email to support (at) tld.dom')}}</p>
+        <p>{{_('Some documentation is available on %(link)s', link='[https://documents.wpia.club](https://documents.wpia.club)')|markdown}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{%- endblock %}

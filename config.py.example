@@ -1,0 +1,11 @@
+APP_NAME="SomeCA"
+
+LOGO="logo.png"
+FAVICON=""
+DOMAIN="someca.tld"
+
+LANGUAGES = {
+    'en': 'English',
+    'de': 'Deutsch'
+}
+
