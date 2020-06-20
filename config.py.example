@@ -3,6 +3,8 @@ APP_NAME="SomeCA"
 LOGO="logo.png"
 FAVICON=""
 DOMAIN="someca.tld"
+SHA1="tbd"
+SHA256="tbd"
 
 LANGUAGES = {
     'en': 'English',

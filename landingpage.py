@@ -22,12 +22,14 @@ md = Markdown(app, extensions=[EscapeHtml()])
 # Load config
 app.config.from_pyfile('config.py')
 
-appname=app.config.get("APP_NAME")
-
-logo=app.config.get("LOGO")
-
-favicon=app.config.get("FAVICON")
-domain=app.config.get("DOMAIN")
+conf={
+    'appname':app.config.get("APP_NAME"), 
+    'logo':app.config.get("LOGO"),
+    'favicon':app.config.get("FAVICON"),
+    'domain':app.config.get("DOMAIN"),
+    'sha1':app.config.get("SHA1"),
+    'sha256':app.config.get("SHA256")
+}
 
 @lang.allowed_languages
 def get_allowed_languages():
@@ -48,7 +50,7 @@ def get_languages():
 @app.route('/')
 @app.route('/index')
 def main():
-        return render_template('index.html', appname=appname, languages=get_languages(),logo=logo, domain=domain)
+        return render_template('index.html', languages=get_languages(), conf=conf)
 
 def rel_redirect(loc):
     r = redirect(loc)
@@ -61,3 +63,14 @@ def set_language(language):
     lang.change_language(language)
     return rel_redirect("/")
 
+@app.route('/about')
+def about():
+        return render_template('about.html', languages=get_languages(), conf=conf)
+
+@app.route('/rootcert')
+def roots():
+        return render_template('roots.html', languages=get_languages(), conf=conf)
+
+@app.route('/community')
+def community():
+        return render_template('community.html', languages=get_languages(), conf=conf)

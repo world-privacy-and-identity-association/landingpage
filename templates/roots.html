@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+  <h1>{{_('Root certificates')}}</h1>
+  <p>{{_('To install the root and intermediate certificates download them and install them into the truststore of your browser.')}}</p>
+  <p>{{_('A detailed HowTo is available %(link)s.', link='[here](https://documents.wpia.club/truststores.html)')|markdown}}</p>
+  <p><a href="http://g2.crt.{{conf.domain}}/g2/root.crt">{{_('Root certificates')}}</a></p>
+  <p>{{_('Root certificate fingerprints:')}}</p>
+  <p>{{_('Fingerprint SHA-1:')}} {{conf.sha1}}</p>
+  <p>{{_('Fingerprint SHA-256:')}} {{conf.sha256}}</p>
+  <p><a href="http://g2.crt.{{conf.domain}}/g2/orga.crt">{{_('Intermediate organisation certificate')}}</a></p>
+  <p><a href="http://g2.crt.{{conf.domain}}/g2/2020/orga-2.crt">{{_('Intermediate organisation certificate 2020/2')}}</a></p>
+</div>
+{%- endblock %}
