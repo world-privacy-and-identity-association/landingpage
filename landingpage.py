@@ -26,7 +26,9 @@ conf={
     'appname':app.config.get("APP_NAME"), 
     'logo':app.config.get("LOGO"),
     'favicon':app.config.get("FAVICON"),
-    'domain':app.config.get("DOMAIN")
+    'domain':app.config.get("DOMAIN"),
+    'sha1':app.config.get("SHA1"),
+    'sha256':app.config.get("SHA256")
 }
 
 @lang.allowed_languages
@@ -61,3 +63,14 @@ def set_language(language):
     lang.change_language(language)
     return rel_redirect("/")
 
+@app.route('/about')
+def about():
+        return render_template('about.html', languages=get_languages(), conf=conf)
+
+@app.route('/rootcert')
+def roots():
+        return render_template('roots.html', languages=get_languages(), conf=conf)
+
+@app.route('/community')
+def community():
+        return render_template('community.html', languages=get_languages(), conf=conf)
