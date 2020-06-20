@@ -2,7 +2,7 @@
 {% block body %}
 <div class="container">
     <div>
-        <h1>Welcome to {{appname}}!</h1>
+        <h1>Welcome to {{conf.appname}}!</h1>
         
         <p>This service is provided by WPIA (<a href="https://wpia.club" target="_blank">https://wpia.club</a>)</p>
     </div>
@@ -24,7 +24,7 @@
       </div>
       <div class="card-body">
         <p>{{_('Register for your free account to be able to get your on S/MIME certificates')}}</p>
-        <p><a href="https://www.{{domain}}">https://www.{{domain}}</a></p>
+        <p><a href="https://www.{{conf.domain}}">https://www.{{conf.domain}}</a></p>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@
       <div class="card-body">
         <p>{{_('To show your knowledge pass the challenges. For some roles challenges must be passed once a year.')}}</p>
         <p>{{_('To log into the system you need a certificate.')}}</p>
-        <p><a href="https://quiz.{{domain}}">https://quiz.{{domain}}</a></p>
+        <p><a href="https://quiz.{{conf.domain}}">https://quiz.{{conf.domain}}</a></p>
       </div>
     </div>
   </div>
