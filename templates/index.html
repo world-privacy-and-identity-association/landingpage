@@ -13,7 +13,7 @@
         {{_('About')}}
       </div>
       <div class="card-body">
-        <p>{{_('Information')}}</p>
+        <p>{{_('Information about %(app)s.', app=conf.appname)}}</p>
         <p><a href="/about">{{_('more')}}</a></p>
       </div>
     </div>
@@ -34,11 +34,35 @@
   <div class="col-sm-6">
     <div class="info card" id="votes">
       <div class="card-heading text-white bg-info">
+        {{_('Community / Support us')}}
+      </div>
+      <div class="card-body">
+        <p>{{_('As we are a community based open source project we are always looking for help.')}}</p>
+        <p><a href="/community">more</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="info card" id="votes">
+      <div class="card-heading text-white bg-info">
         {{_('Certificate Authority (CA)')}}
       </div>
       <div class="card-body">
         <p>{{_('Register for your free account to be able to get your own S/MIME certificates.')}}</p>
         <p><a href="https://www.{{conf.domain}}">https://www.{{conf.domain}}</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="info card" id="votes">
+      <div class="card-heading text-white bg-info">
+        {{_('Support')}}
+      </div>
+      <div class="card-body">
+        <p>{{_('If you need support send an email to support (at) %(domain)s.', domain=conf.domain)}}</p>
+        <p>{{_('Some documentation is available on %(link)s.', link='[https://documents.wpia.club](https://documents.wpia.club)')|markdown}}</p>
       </div>
     </div>
   </div>
@@ -51,30 +75,6 @@
         <p>{{_('To show your knowledge pass the challenges. For some roles challenges must be passed once a year.')}}</p>
         <p>{{_('To log into the system you need a certificate.')}}</p>
         <p><a href="https://quiz.{{conf.domain}}">https://quiz.{{conf.domain}}</a></p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-6">
-    <div class="info card" id="votes">
-      <div class="card-heading text-white bg-info">
-        {{_('Community / Support us')}}
-      </div>
-      <div class="card-body">
-        <p>{{_('As we are a community based open source project we are always looking for help.')}}</p>
-        <p><a href="/community">more</a></p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="info card" id="votes">
-      <div class="card-heading text-white bg-info">
-        {{_('Support')}}
-      </div>
-      <div class="card-body">
-        <p>{{_('If you need support send an email to support (at) %(domain)s.', domain=conf.domain)}}</p>
-        <p>{{_('Some documentation is available on %(link)s.', link='[https://documents.wpia.club](https://documents.wpia.club)')|markdown}}</p>
       </div>
     </div>
   </div>
