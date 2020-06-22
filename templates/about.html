@@ -1,8 +1,20 @@
 {% extends "base.html" %}
 {% block body %}
 <div class="container">
- <h1>about</h1>
-
-
+  <h1>{{_('About secu-CA the community CA')}}</h1>
+  <p>{{_('secu-CA is a community driven Certificate Authority (CA) powered by %(link)s.', link='[WPIA](https://wpia.club)')|markdown}}</p>
+  <p>{{_('secu-CA offers the chance to get S/MIME certificates to encrypt emails and web service communications for personal use for free.')}}</p>
+  <p>{{_('There are two limitations:')}}</p>
+  <ul>
+    <li>{{_('The life time of a certificate is six months only. This is due to the fact that the email address or domain is only email validated.')}}</li>
+    <li>{{_('The root and intermediate certificates issued by secu-CA are not integrated in the browser and operationg system truststores and need to be added to the truststores before the issued certificates can be used without nasty warnings of the applications.')}}</li>
+  </ul>
+  <p>{{_('WPIA is working on a further Certifcate Authority with these goals:')}}</p>
+  <ul>
+    <li>{{_('Validated identity to use name in certificate.')}}</li>
+    <li>{{_('Certificate lifetime of 24 months.')}}</li>
+    <li>{{_('Root and intermediate certificates included in major truststores.')}}</li>
+  </ul>
+  <p>{{_('Once this CA is setup the service of secu-CA will be closed.')}}</p>
 </div>
 {%- endblock %}

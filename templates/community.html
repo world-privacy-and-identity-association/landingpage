@@ -10,15 +10,22 @@
 
   <h2>{{_('Software developers')}}</h2>
   <p>{{_('We are always need help in improving our current software as well as to develop new applications to support our goals.')}}</p>
-  <p>{{_('The languages that we are developing in are java, python and php.')}}</p>
-  <p>{{_('Your development process basicly follows this path:')}}</p>
-  <p>{{_('Create a patch and push it to your review system (gerrit) where it undergoes a continuos integreation test as well as reviews by expirenced developers.')}}</p>
-  <p>{{_('If the patch is approved it it move to a test server where it is tested by humans.')}}</p>
-  <p>{{_('If it passed here it is pushed to the productive system.')}}</p>
-  <p>{{_('If you are interested to join fill out and sign the %(link)s and send it to %(email)s.', link='[individual contributor licence agreement](https://wpia.club/files/en/Individual-Contribution-License-Agreement-v3.pdf)', email='info (at) wpia.club')|markdown}}</p> 
+  <p>{{_('The languages that we are developing in are currently Java, Python and php.')}}</p>
+  <p>{{_('Your development process basically follows this path:')}}</p>
+  <ul>
+    <li>{{_('Create a patch and push it to your review system (gerrit) where it undergoes a continuos integreation test as well as reviews by expirenced developers.')}}</li>
+    <li>{{_('If the patch is approved it it move to a test server where it is tested by humans.')}}</li>
+    <li>{{_('Once the patch passed there it is pushed to the productive system.')}}</li>
+  </ul>
+  <p>{{_('Our public code repositories are availabe under %(link)s.', link='[https://code.wpia.club](https://code.wpia.club)')|markdown}}</p> 
 
   <h2>{{_('Admins')}}</h2>
   <p>{{_('All our server are using debian and are maintained via puppet.')}}</p>
-  <p>{{_('If you are interested to join fill out and sign the %(link)s and send it to %(email)s.', link='[individual contributor licence agreement](https://wpia.club/files/en/Individual-Contribution-License-Agreement-v3.pdf)', email='info (at) wpia.club')|markdown}}</p> 
+
+  <h2>{{_('Documentation and translation')}}</h2>
+  <p>{{_('If your are missing a documentation or language in one of our software applications, join and fill the gap.')}}</p>
+
+  <h2>{{_('Interested to join?')}}</h2>
+  <p>{{_('If you are interested to join fill out and sign the %(link)s and send it to %(email)s. You will then granted access to the needed systems.', link='[individual contributor licence agreement](https://wpia.club/files/en/Individual-Contribution-License-Agreement-v3.pdf)', email='info (at) wpia.club')|markdown}}</p> 
 </div>
 {%- endblock %}
