@@ -28,7 +28,8 @@ conf={
     'favicon':app.config.get("FAVICON"),
     'domain':app.config.get("DOMAIN"),
     'sha1':app.config.get("SHA1"),
-    'sha256':app.config.get("SHA256")
+    'sha256':app.config.get("SHA256"),
+    'community':app.config.get("COMMUNITY")
 }
 
 @lang.allowed_languages
