@@ -5,7 +5,7 @@ from flask import jsonify
 from flask_language import Language, current_language
 from flaskext.markdown import Markdown
 from markdown.extensions import Extension
-
+from datetime import date
 
 app = Flask(__name__)
 #app.register_blueprint(filters.blueprint)
@@ -29,8 +29,15 @@ conf={
     'domain':app.config.get("DOMAIN"),
     'sha1':app.config.get("SHA1"),
     'sha256':app.config.get("SHA256"),
-    'community':app.config.get("COMMUNITY")
+    'community':app.config.get("COMMUNITY"),
+    'year':date.today().year
 }
+
+#current_year = 
+#conf.year = "- " + str(current_year)
+#if current_year == 2021:
+#    conf.year = ""
+
 
 @lang.allowed_languages
 def get_allowed_languages():
