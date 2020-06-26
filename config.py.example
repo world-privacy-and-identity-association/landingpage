@@ -6,6 +6,8 @@ DOMAIN="someca.tld"
 SHA1="tbd"
 SHA256="tbd"
 
+COMMUNITY="false"
+
 LANGUAGES = {
     'en': 'English',
     'de': 'Deutsch'

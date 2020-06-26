@@ -4,9 +4,11 @@
   <h1>{{_('Community')}}</h1>
   <p>{{_('Become part of the community and join one of our teams or just spread good information about our service.')}}</p>
 
+{%- if conf.community == true %}
   <h2>{{_('RA Agents')}}</h2>
   <p>{{_('Our RA Agents proof the identity of natural persons so that our CA is able to issue certificates with the persons name in it.')}}</p>
   <p>{{_('To become an RA Agent get verified, pass the RA Agent Challenge and sign the RA Agent contract.')}}</p>
+{%- endif %}
 
   <h2>{{_('Software developers')}}</h2>
   <p>{{_('We are always need help in improving our current software as well as to develop new applications to support our goals.')}}</p>
