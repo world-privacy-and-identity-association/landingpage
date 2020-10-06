@@ -12,9 +12,17 @@ virtualenv -p python3
 pip install -r requirements.txt
 ```
 
+To install on MacOS:
+
+```
+python3 -m virtualenv .
+./bin/activate
+source bin/activate
+```
+
 Then edit config.py.example into config.py with your settings.
 
-To debug-run linux:
+To debug-run linux and MacOS:
 
 ```
 LANG=C.UTF-8 FLASK_DEBUG=1 FLASK_APP=landingpage.py flask run
