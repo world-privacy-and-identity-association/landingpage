@@ -6,7 +6,7 @@ DOMAIN="someca.tld"
 SHA1="tbd"
 SHA256="tbd"
 
-COMMUNITY="false"
+COMMUNITY="false" # false - no community restrictions 
 
 LANGUAGES = {
     'en': 'English',
