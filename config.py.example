@@ -3,8 +3,12 @@ APP_NAME="SomeCA"
 LOGO="logo.png"
 FAVICON=""
 DOMAIN="someca.tld"
-SHA1="tbd"
-SHA256="tbd"
+SUPPORTDOMAIN="someca.tld"
+SUPPORTCERTDOMAIN="someca.tld"
+SHA1="tbd"  #sha1 fingerprint of root certificate
+SHA256="tbd"  #sha256 fingerprint of root certificate
+ORGACERT="2020/2" # term of intermediate certificate to sign the websites crt file
+ORGACERTSUPPORT="2020/2" # term of intermediate certificate to sign the support crt file
 
 COMMUNITY="false" # false - no community restrictions 
 

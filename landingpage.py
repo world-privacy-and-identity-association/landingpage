@@ -6,6 +6,8 @@ from flask_language import Language, current_language
 from flaskext.markdown import Markdown
 from markdown.extensions import Extension
 from datetime import date
+from flask import send_file
+import os
 
 app = Flask(__name__)
 #app.register_blueprint(filters.blueprint)
@@ -27,17 +29,15 @@ conf={
     'logo':app.config.get("LOGO"),
     'favicon':app.config.get("FAVICON"),
     'domain':app.config.get("DOMAIN"),
+    'supportdomain':app.config.get("SUPPORTDOMAIN"),
+    'supportcertdomain':app.config.get("SUPPORTCERTDOMAIN"),
     'sha1':app.config.get("SHA1"),
     'sha256':app.config.get("SHA256"),
+    'orgacert':app.config.get("ORGACERT"),
+    'orgacertsupport':app.config.get("ORGACERTSUPPORT"),
     'community':app.config.get("COMMUNITY"),
     'year':date.today().year
 }
-
-#current_year = 
-#conf.year = "- " + str(current_year)
-#if current_year == 2021:
-#    conf.year = ""
-
 
 @lang.allowed_languages
 def get_allowed_languages():
@@ -73,12 +73,21 @@ def set_language(language):
 
 @app.route('/about')
 def about():
-        return render_template('about.html', languages=get_languages(), conf=conf)
+    return render_template('about.html', languages=get_languages(), conf=conf)
 
 @app.route('/rootcert')
 def roots():
-        return render_template('roots.html', languages=get_languages(), conf=conf)
+    return render_template('roots.html', languages=get_languages(), conf=conf, orga=conf['orgacert'].split("/"))
 
 @app.route('/community')
 def community():
-        return render_template('community.html', languages=get_languages(), conf=conf)
+    return render_template('community.html', languages=get_languages(), conf=conf)
+
+@app.route('/support')
+def support():
+    return render_template('support.html', languages=get_languages(), conf=conf, orga=conf['orgacertsupport'].split("/"))
+    
+@app.route('/supportfile')
+def downloadSupportCert ():
+    supportkey = os.path.join(app.root_path, "keys", "support.crt")
+    return send_file(supportkey, as_attachment=True)

@@ -9,6 +9,6 @@
   <p>{{_('Fingerprint SHA-1:')}} {{conf.sha1}}</p>
   <p>{{_('Fingerprint SHA-256:')}} {{conf.sha256}}</p>
   <p><a href="http://g2.crt.{{conf.domain}}/g2/orga.crt">{{_('Intermediate organisation certificate')}}</a></p>
-  <p><a href="http://g2.crt.{{conf.domain}}/g2/2020/orga-2.crt">{{_('Intermediate organisation certificate 2020/2')}}</a></p>
+  <p><a href="http://g2.crt.{{conf.supportcertdomain}}/g2/{{orga[0]}}/orga-{{orga[1]}}.crt">{{_('Intermediate organisation certificate %(year)s/%(term)s', year=orga[0], term=orga[1])}}</a></p>
 </div>
 {%- endblock %}
