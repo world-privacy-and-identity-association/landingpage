@@ -91,3 +91,7 @@ def support():
 def downloadSupportCert ():
     supportkey = os.path.join(app.root_path, "keys", "support.crt")
     return send_file(supportkey, as_attachment=True)
+
+@app.route('/links')
+def links():
+    return render_template('links.html', languages=get_languages(), conf=conf)
