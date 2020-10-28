@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+  <h1>{{_('Support')}}</h1>
+  <p>{{_('If you wish to send an encrypted email to support (at) %(domain)s get the public key:', domain=conf.supportdomain)}}</p>
+
+  <p><a href="http://g2.crt.{{conf.supportcertdomain}}/g2/root.crt">{{_('Root certificates')}}</a></p>
+  <p><a href="http://g2.crt.{{conf.supportcertdomain}}/g2/orga.crt">{{_('Intermediate organisation certificate')}}</a></p>
+  <p><a href="http://g2.crt.{{conf.supportcertdomain}}/g2/{{orga[0]}}/orga-{{orga[1]}}.crt">{{_('Intermediate organisation certificate %(year)s/%(term)s', year=orga[0], term=orga[1])}}</a></p>
+  <p><a href="/supportfile">{{_('Support')}}</a></p>
+
+
+  <p>{{_('Some support documentation is available on %(link)s.', link='[https://documents.wpia.club](https://documents.wpia.club)')|markdown}}</p>
+</div>
+{%- endblock %}

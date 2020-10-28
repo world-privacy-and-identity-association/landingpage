@@ -4,6 +4,11 @@
 
 Requires python 3
 
+* Adjust config.py.example and save it as config.py.
+* Add logo and favicon file to folder static.
+* Add public key of support email address to folder keys.
+* Add translation files to folder translations. See readme.md in folder.
+
 To install:
 
 ```

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+  <h1>{{_('Links')}}</h1>
+  <p>{{_('Some more websites with additional information and services powered by WPIA and %(app)s.', app=conf.appname)}}</p>
+
+  <p>{{_('Glossary (%(link)s).', link='[https://glossary.wpia.club](https://glossary.wpia.club)')|markdown}}</p>
+  <p>{{_('Policy motion system (%(link)s).', link='[http://motions.policy.teracara.org/](http://motions.policy.teracara.org/)')|markdown}}</p>
+</div>
+{%- endblock %}
