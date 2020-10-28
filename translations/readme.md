@@ -17,3 +17,8 @@ To compile the translated text use:
 ```
 pybabel compile -d translations
 ```
+
+The translation files are mainitained in a repo and translated on Transifex [https://www.transifex.com/wpia/landingpage-1/dashboard/](https://www.transifex.com/wpia/landingpage-1/dashboard/).
+
+
+The translation file are stored in this files structure translations/XX/LC_MESSAGES/messages.po with XX as language code.

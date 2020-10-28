@@ -1,1 +1,4 @@
 /keys/*.crt
+/translations/messages.pot
+/translations/de/LC_MESSAGES/*.po
+/config.py
