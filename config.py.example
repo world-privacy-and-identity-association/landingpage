@@ -5,8 +5,8 @@ FAVICON=""
 DOMAIN="someca.tld"
 SUPPORTDOMAIN="someca.tld"
 SUPPORTCERTDOMAIN="someca.tld"
-SHA1="tbd"  #sha1 fingerprint of root certificate
-SHA256="tbd"  #sha256 fingerprint of root certificate
+SHA1="tbd"  #sha1 fingerprint of root certificate, format 4 digits space 4 digits etc
+SHA256="tbd"  #sha256 fingerprint of root certificat, format 4 digits space 4 digits etc
 ORGACERT="2020/2" # term of intermediate certificate to sign the websites crt file
 ORGACERTSUPPORT="2020/2" # term of intermediate certificate to sign the support crt file
 

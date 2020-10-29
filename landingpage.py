@@ -49,6 +49,7 @@ def get_default_language():
 
 @babel.localeselector
 def get_locale():
+    #return request.accept_languages.best_match(app.config['LANGUAGES'].keys())
     return str(current_language)
 
 def get_languages():
@@ -58,7 +59,7 @@ def get_languages():
 @app.route('/')
 @app.route('/index')
 def main():
-        return render_template('index.html', languages=get_languages(), conf=conf)
+    return render_template('index.html', languages=get_languages(), conf=conf)
 
 def rel_redirect(loc):
     r = redirect(loc)

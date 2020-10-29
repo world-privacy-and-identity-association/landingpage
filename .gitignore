@@ -2,3 +2,8 @@
 /translations/messages.pot
 /translations/de/LC_MESSAGES/*.po
 /config.py
+/translations/de/LC_MESSAGES/*.mo
+/landingpage
+/static/*.ico
+/static/*.png
+/static/*.svg
